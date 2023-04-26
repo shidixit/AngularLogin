@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="container-split" style="background-color: #0060E6;">
+    <div class="content-large">
+      HUGENX
+    </div>
+    <div class="content-small">
+      Laboratory Information System
+    </div>
+  </div>
+  <div class="container-split">
+    <form class="split" [formGroup]="loginForm">
+      <div class="label">
+        Log in to your account
+      </div>
+      <input class="input" #first placeholder="UserName" formControlName="name" />
+      <div>
+        <input [type]="hide ? 'password' : 'text'" matInput class="input" placeholder="password" formControlName="password"/>
+        <mat-icon matSuffix (click)="hide = !hide" class="password-icon">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </div>
+      <a href="javascript:void(0);">forgot password?</a>
+      <button mat-raised-button class="button" (click)="login()">LOGIN</button>
+    </form>
+  </div>
+</div>
